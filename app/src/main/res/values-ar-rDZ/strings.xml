@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DZNow</string>
+    <string name="economy">الاقتصاد</string>
+    <string name="politics">السياسة</string>
+    <string name="international">الدولي</string>
+    <string name="sports">الرياضة</string>
+    <string name="culture">الثقافة</string>
+    <string name="latest_news">آخر الأخبار</string>
+    <string name="news">المواضيع</string>
+    <string name="home">الرئيسية</string>
+    <string name="downloaded">التحميل</string>
+    <string name="settings">الاعدادات</string>
+    <string name="logo_description">رمز</string>
+    <string name="bg_description">خلفية</string>
+    <string name="title">DZ Now</string>
+    <string name="logo">رمز</string>
+    <string name="app_name_logo">اسم التطبيق</string>
+    <string name="title_news">عنوان</string>
+    <string name="place_and_or_time">المكان و الزمان</string>
+    <string name="a_brief_description">تلخيص موجز</string>
+    <string name="news_image">الصور الجديدة</string>
+    <string name="download_icon">ايقونة التحميل</string>
+    <string name="share_icon">ايقونة المشاركة</string>
+    <string name="downloaded_articles">المقالات المحملة</string>
+    <string name="icon">أيقونة</string>
+    <string name="english">الانجليزية</string>
+    <string name="help">مساعدة</string>
+    <string name="about">حول التطبيق</string>
+    <string name="notifications">الاعلام</string>
+    <string name="theme">مظهر التطبيق</string>
+    <string name="french">الفرنسية</string>
+    <string name="arabe">العربية</string>
+    <string name="language">اللغات</string>
+</resources>

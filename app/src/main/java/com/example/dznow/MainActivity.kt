@@ -1,5 +1,6 @@
 package com.example.dznow
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,6 +14,17 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // We simulate the time that the app needs to retrieve the data needed
+        val bg = object : Thread() {
+            override fun run() = try {
+                Thread.sleep(2000)
+                val toHome = Intent(baseContext, Home::class.java)
+                startActivity(toHome)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        bg.start()
     }
 
     override fun onResume() {
@@ -21,5 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         super.onResume()
+    }
+
+    fun init() {
+
     }
 }

@@ -3,5 +3,10 @@
     <color name="colorPrimary">#EE5A2C</color>
     <color name="colorPrimaryDark">#E65121</color>
     <color name="colorAccent">#DB1958</color>
+    <color name="colorAccentLight">#AEDB1958</color>
     <color name="pink">#B51565</color>
+    <color name="bgColor">#EEEEEE</color>
+    <color name="darkGrey">#727C8E</color>
+    <color name="lightGrey">#F7F7F7</color>
+    <color name="white">#FFFFFF</color>
 </resources>

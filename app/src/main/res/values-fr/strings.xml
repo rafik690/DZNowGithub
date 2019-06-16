@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DZNow</string>
+    <string name="home">Accueil</string>
+    <string name="downloaded">Téléchargé</string>
+    <string name="news">Thématique</string>
+    <string name="settings">Paramètre</string>
+    <string name="latest_news">Actualité</string>
+    <string name="culture">Culture</string>
+    <string name="sports">Sports</string>
+    <string name="international">International</string>
+    <string name="politics">Politique</string>
+    <string name="economy">Economie</string>
+    <string name="logo_description">Logo</string>
+    <string name="bg_description">Font d\'Ecran</string>
+    <string name="title">DZ Now</string>
+    <string name="logo">Logo</string>
+    <string name="app_name_logo">Nom App</string>
+    <string name="title_news">Titre</string>
+    <string name="place_and_or_time">Lieu et Date</string>
+    <string name="a_brief_description">Description brève</string>
+    <string name="news_image">Nouvelle Image</string>
+    <string name="download_icon">Icone Téléchargement</string>
+    <string name="share_icon">Icone Partage</string>
+    <string name="downloaded_articles">Articles Téléchargés</string>
+    <string name="icon">Icone</string>
+    <string name="english">Anglais</string>
+    <string name="help">Aide</string>
+    <string name="about">A propos</string>
+    <string name="notifications">Notifications</string>
+    <string name="theme">Thème</string>
+    <string name="french">Français</string>
+    <string name="arabe">Arabe</string>
+    <string name="language">Langues</string>
+</resources>
