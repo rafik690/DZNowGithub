@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.light">
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:background">@color/bgColor</item>
+    </style>
+
+    <style name="AppTheme.dark">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/darkGrey</item>
+    </style>
+
 </resources>
