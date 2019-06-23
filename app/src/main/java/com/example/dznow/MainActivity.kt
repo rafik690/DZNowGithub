@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         // We simulate the time that the app needs to retrieve the data needed
         val bg = object : Thread() {
             override fun run() = try {

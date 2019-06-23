@@ -11,12 +11,22 @@ import kotlinx.android.synthetic.main.fragment_settings_list.*
 class Settings : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val tm = ThemeManager()
+        tm.applyTheme(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
         init_navbars()
         addListeners()
         addLinks()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (ThemeManager().getChanged(this)) {
+            ThemeManager().setChanged(this, false)
+            recreate()
+        }
     }
 
     fun init_navbars() {

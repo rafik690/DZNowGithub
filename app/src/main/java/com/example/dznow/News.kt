@@ -3,6 +3,7 @@ package com.example.dznow
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_news.*
 import kotlinx.android.synthetic.main.fragment_navbars.*
@@ -12,12 +13,29 @@ import kotlinx.android.synthetic.main.fragment_topics_list.*
 class News : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val tm = ThemeManager()
+        tm.applyTheme(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
+
+        val firstFragment = international()
+
+        firstFragment.arguments = intent.extras
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.scrollArticles, firstFragment).commit()
 
         initNavbars()
         addListeners()
         initTopics()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (ThemeManager().getChanged(this)) {
+            ThemeManager().setChanged(this, false)
+            recreate()
+        }
     }
 
     fun initNavbars() {
@@ -54,25 +72,42 @@ class News : AppCompatActivity() {
             startActivity(dest)
         }
 
+        /** Topics Navbar*/
+
         fragment9.textView10.setOnClickListener {
             resetTopics()
             setStyle(fragment9.textView10, R.color.white, R.color.colorAccentLight)
+
+            val newFrag = international()
+            replaceFrag(newFrag)
         }
         fragment9.secondTopic.setOnClickListener {
             resetTopics()
             setStyle(fragment9.secondTopic, R.color.white, R.color.colorAccentLight)
+
+            val newFrag = culture()
+            replaceFrag(newFrag)
         }
         fragment9.textView13.setOnClickListener {
             resetTopics()
             setStyle(fragment9.textView13, R.color.white, R.color.colorAccentLight)
+
+            val newFrag = sports()
+            replaceFrag(newFrag)
         }
         fragment9.textView14.setOnClickListener {
             resetTopics()
             setStyle(fragment9.textView14, R.color.white, R.color.colorAccentLight)
+
+            val newFrag = politics()
+            replaceFrag(newFrag)
         }
         fragment9.textView15.setOnClickListener {
             resetTopics()
             setStyle(fragment9.textView15, R.color.white, R.color.colorAccentLight)
+
+            val newFrag = economy()
+            replaceFrag(newFrag)
         }
     }
 
@@ -92,5 +127,14 @@ class News : AppCompatActivity() {
     fun setStyle(view : TextView, text : Int, bg : Int) {
         view.setTextColor(resources.getColor(text))
         view.setBackgroundColor(resources.getColor(bg))
+    }
+
+    fun replaceFrag(newFrag : Fragment) {
+        val transaction = supportFragmentManager.beginTransaction().apply {
+            replace(R.id.scrollArticles, newFrag)
+            addToBackStack(null)
+        }
+
+        transaction.commit();
     }
 }

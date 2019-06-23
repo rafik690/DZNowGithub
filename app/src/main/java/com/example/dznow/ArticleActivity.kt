@@ -1,18 +1,19 @@
 package com.example.dznow
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_notifications.*
+import kotlinx.android.synthetic.main.activity_article.*
 
-class Notifications : AppCompatActivity() {
+class ArticleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val tm = ThemeManager()
         tm.applyTheme(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notifications)
-
-        closeNotif.setOnClickListener {
+        setContentView(R.layout.activity_article)
+        imageView2.setOnClickListener {
             finish()
         }
     }
@@ -24,4 +25,5 @@ class Notifications : AppCompatActivity() {
             recreate()
         }
     }
+
 }

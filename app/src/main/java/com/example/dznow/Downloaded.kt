@@ -10,11 +10,21 @@ import kotlinx.android.synthetic.main.fragment_navbars_text.*
 class Downloaded : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        val tm = ThemeManager()
+        tm.applyTheme(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_downloaded)
 
         init_navbars()
         addListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (ThemeManager().getChanged(this)) {
+            ThemeManager().setChanged(this, false)
+            recreate()
+        }
     }
 
     fun init_navbars() {
